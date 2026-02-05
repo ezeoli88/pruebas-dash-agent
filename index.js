@@ -1,15 +1,14 @@
-const express = require('express');
+import express from 'express';
+import fibonacciRoutes from './src/routes/fibonacciRoutes.js';
+
 const app = express();
 const port = 3002;
-
-// Importing routes
-const fibonacciRoutes = require('./src/routes/fibonacciRoutes');
 
 // Use routes
 app.use('/api/fibonacci', fibonacciRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ mensaje: "Bienvenidos al sevidor de node" });
+  res.json({ mensaje: "Bienvenidos al servidor de node" });
 });
 
 app.listen(port, () => {

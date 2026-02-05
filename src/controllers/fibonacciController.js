@@ -5,7 +5,7 @@
  * @param {Request} req
  * @param {Response} res
  */
-exports.getFirst50 = (req, res) => {
+const getFirst50 = (req, res) => {
   const fibonacci = [0, 1];
 
   for (let i = 2; i < 50; i++) {
@@ -14,3 +14,5 @@ exports.getFirst50 = (req, res) => {
 
   res.json({ data: fibonacci });
 };
+
+export { getFirst50 };

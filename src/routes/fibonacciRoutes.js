@@ -1,9 +1,10 @@
 // fibonacciRoutes.js
 
-const express = require('express');
+import express from 'express';
+import { getFirst50 } from '../controllers/fibonacciController.js';
+
 const router = express.Router();
-const { getFirst50 } = require('../controllers/fibonacciController');
 
 router.get('/first50', getFirst50);
 
-module.exports = router;
+export default router;
