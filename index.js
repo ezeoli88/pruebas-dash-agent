@@ -2,7 +2,7 @@ import express from 'express';
 import usersRoutes from './src/routes/usersRoutes.js';
 
 const app = express();
-const port = 3002;
+const port = 3003;
 
 // Use routes
 app.use('/api/users', usersRoutes);
