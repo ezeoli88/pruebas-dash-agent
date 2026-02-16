@@ -9,6 +9,18 @@ app.get('/', (req, res) => {
   res.json({ mensaje: "Bienvenidos al servidor de node" });
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+    database: {
+      status: 'disconnected',
+      message: 'No database configured'
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
